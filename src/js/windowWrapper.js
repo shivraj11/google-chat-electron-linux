@@ -2,6 +2,7 @@
 
 const path = require('path');
 const {app, BrowserWindow} = require('electron');
+const loadSplashWindow = require('./features/splash.js');
 
 module.exports = (url) => {
   const window = new BrowserWindow({
@@ -18,11 +19,13 @@ module.exports = (url) => {
     backgroundColor: '#ffffff',
   });
 
+  const splash = loadSplashWindow();
+  window.loadURL(url);
+
   window.once('ready-to-show', () => {
+    splash.destroy();
     window.show();
   });
-
-  window.loadURL(url);
 
   return window;
 };
