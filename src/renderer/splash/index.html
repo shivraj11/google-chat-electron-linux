@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Loading | Google Chat</title>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+  <link rel="stylesheet" href="splash.css">
+</head>
+<body>
+<div class="app">
+  <main class="splash">
+    <img class="logo" src="../../../resources/icons/normal/scalable.svg" alt="Google Chat" width="200">
+    <h1 class="app-name">Google Chat <span id="app-version"></span></h1>
+    <h3 id="app-loading" class="app-loading text-muted">Loading ...</h3>
+
+    <div id="app-offline" class="app-offline" style="display: none">
+      <h3 class="app-offline text-muted">You are offline :( </h3>
+      <button id="retry-btn" class="btn">Retry</button>
+    </div>
+
+  </main>
+</div>
+<script src="splash.js" async></script>
+</body>
+</html>

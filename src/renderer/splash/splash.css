@@ -1,0 +1,36 @@
+body {
+  font-family: Roboto, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #222;
+  font-size: 16px;
+  line-height: 1.4rem;
+}
+
+.app {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.splash {
+  text-align: center;
+}
+
+.text-muted {
+  color: #676060;
+}
+
+.btn {
+  border: 1px solid #222;
+  color: #fff;
+  background: #474444;
+  padding: 8px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #222;
+}
