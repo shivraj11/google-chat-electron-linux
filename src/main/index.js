@@ -27,7 +27,7 @@ if (!enforceSingleInstance()) {
 
 app.whenReady()
   .then(() => {
-    mainWindow = windowWrapper('https://chat.google.com/');
+    mainWindow = windowWrapper();
 
     trayIcon = setupTrayIcon(mainWindow);
     setAppMenu(mainWindow);

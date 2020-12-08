@@ -1,7 +1,7 @@
 const path = require('path');
 const {app, BrowserWindow} = require('electron');
 
-module.exports = (url) => {
+module.exports = () => {
   const window = new BrowserWindow({
     webPreferences: {
       autoplayPolicy: 'user-gesture-required',
@@ -11,20 +11,16 @@ module.exports = (url) => {
       preload: path.join(app.getAppPath(), 'src/renderer/index.js'),
     },
     icon: path.join(app.getAppPath(), 'resources/icons/normal/256.png'),
-    show: false,
     minHeight: 570,
     minWidth: 400,
     center: true,
     title: app.getName(),
-    backgroundColor: '#E8EAED',
+    backgroundColor: '#f8f8f8',
     fullscreenable: false,
   });
 
-  window.once('ready-to-show', () => {
-    window.show();
-  });
-
-  window.loadURL(url);
+  const splashFile = path.join(app.getAppPath(), 'src/renderer/splash/index.html')
+  window.loadURL(`file://${splashFile}`);
 
   return window;
 };
